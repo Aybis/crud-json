@@ -32,7 +32,7 @@ const WriteTextToFileAsync = async (contentToWrite) => {
 };
 
 // Declare post / write route to accept incoming request with data
-app.post('write', async (req, res, next) => {
+app.post('/write', async (req, res, next) => {
   // take the body from incoming request by using req.body and convert it into string
   const requestContent = JSON.stringify(req.body);
   await WriteTextToFileAsync(requestContent);
@@ -51,6 +51,7 @@ app.listen(port, () => {
     `
     !!! server is running
     !!! Listening for incoming requests on port ${port}
+    !!! http://localhost:5000
     `,
   );
 });
