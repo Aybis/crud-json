@@ -103,8 +103,8 @@ function App() {
   const saveJson = (posts) => {
     // api URL // end point from node server / express server
     // const url = 'http://localhost:5000/write';
-    const url = `${process.env.PUBLIC_URL}:5000/write`;
-    axios.post('/write', posts).then((response) => {
+    const url = `https://crud-json.vercel.app/api/write`;
+    axios.post(url, posts).then((response) => {
       // console.log(response);
     });
   };
