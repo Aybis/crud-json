@@ -21,7 +21,7 @@ app.get('/', (req, res) =>
 );
 
 const WriteTextToFileAsync = async (contentToWrite) => {
-  fs.writeFile('./src/data.json', contentToWrite, (err) => {
+  fs.writeFile('./src/json/db.json', contentToWrite, (err) => {
     console.log(contentToWrite);
     if (err) {
       console.log(err);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
-import Data from './data.json';
+import Data from './json/db.json';
 import { v1 as uuidv1 } from 'uuid';
 import axios from 'axios';
 
@@ -102,8 +102,7 @@ function App() {
   // this function will receive all uodated state / posts after you add, edit delete post
   const saveJson = (posts) => {
     // api URL // end point from node server / express server
-    // const url = 'http://localhost:5000/write';
-    const url = `https://crud-json.vercel.app/api/write`;
+    const url = 'http://localhost:5000/write';
     axios.post(url, posts).then((response) => {
       // console.log(response);
     });
