@@ -102,7 +102,7 @@ function App() {
   // this function will receive all uodated state / posts after you add, edit delete post
   const saveJson = (posts) => {
     // api URL // end point from node server / express server
-    const url = 'https://test-crud.vercel.app:5000/write';
+    const url = 'http://localhost:5000/write';
     axios.post(url, posts).then((response) => {
       // console.log(response);
     });
